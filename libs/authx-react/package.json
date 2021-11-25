@@ -1,8 +1,27 @@
 {
   "name": "@oneforx/authx-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "license": "MIT",
   "dependencies": {
     "jwt-decode": "^3.1.2",
     "@oneforx/poseidon": "^0.1.3"
-  }
+  },
+  "author": {
+    "email": "contact@oneforx.net",
+    "name": "oneforx",
+    "url": "https://oneforx.net"
+  },
+  "repository": {
+    "directory": "/tree/master/libs/authx-react",
+    "url": "https://github.com/oneforx/authx"
+  },
+  "homepage": "https://oneforx.github.io/authx",
+  "engines": {
+    "node": ">= v12.18.4"
+  },
+  "keywords": [
+    "react-library", "front-end-library", "front",
+    "library", "hooks", "hooks-library",
+    "contexts", "contexts-library", "authentification"
+  ]
 }
