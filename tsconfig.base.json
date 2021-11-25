@@ -16,6 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@oneforx/authx-react": ["libs/authx-react/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

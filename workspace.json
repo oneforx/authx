@@ -1,6 +1,9 @@
 {
   "version": 2,
   "projects": {
-    "authx-api": "apps/authx-api"
+    "authx-api": "apps/authx-api",
+    "authx-front": "apps/authx-front",
+    "authx-front-e2e": "apps/authx-front-e2e",
+    "authx-react": "libs/authx-react"
   }
 }

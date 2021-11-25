@@ -5,15 +5,25 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "build-front": "NX_BASE_HREF=/authx/ nx build --prod --baseHref=/authx/",
+    "test": "nx test",
+    "publish": "nx build authx-react && cd dist/libs/authx-react && npm publish --scope=@oneforx/authx-react --access=public",
+    "deploy": "gh-pages -d dist/apps/authx-front",
+    "pubdep": "pnpm run build-front && pnpm run deploy"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
+    "@oneforx/poseidon": "^0.1.3",
+    "autoprefixer": "^10.4.0",
     "core-js": "^3.6.5",
     "express": "4.17.1",
+    "gh-pages": "^3.2.3",
+    "har-validator": "^5.1.5",
+    "postcss": "^8.4.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "regenerator-runtime": "0.13.7",
+    "tailwind": "^4.0.0",
     "tslib": "^2.0.0"
   },
   "devDependencies": {

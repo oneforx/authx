@@ -1,0 +1,42 @@
+{
+  "root": "libs/authx-react",
+  "sourceRoot": "libs/authx-react/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/authx-react",
+        "tsConfig": "libs/authx-react/tsconfig.lib.json",
+        "project": "libs/authx-react/package.json",
+        "entryFile": "libs/authx-react/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "libs/authx-react/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/authx-react/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/authx-react"],
+      "options": {
+        "jestConfig": "libs/authx-react/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
