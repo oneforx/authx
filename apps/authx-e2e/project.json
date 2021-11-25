@@ -1,0 +1,28 @@
+{
+  "root": "apps/authx-e2e",
+  "sourceRoot": "apps/authx-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/authx-e2e/cypress.json",
+        "devServerTarget": "authx:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "authx:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/authx-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["authx"]
+}
