@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { Message } from '@authx/api-interfaces';
+import { Message } from '@authx/authx-interfaces';
 
 const app = express();
 
